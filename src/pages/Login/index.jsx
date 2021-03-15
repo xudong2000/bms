@@ -17,7 +17,7 @@ export default class Login extends Component {
   render() {
     const res = getUser()
     if (res !== null) {
-      return <Redirect to="/home" />
+      return <Redirect to="/main" />
     }
 
     const onFinish = (values) => {
@@ -30,7 +30,7 @@ export default class Login extends Component {
               message.success('登录成功')
               saveUser(data)
               this.formRef.current.resetFields()
-              this.props.history.replace('/home')
+              this.props.history.replace('/main')
             } else {
               message.error('密码错误')
             }

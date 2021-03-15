@@ -5,7 +5,7 @@ import './App.css'
 
 const Login = lazy(() => import('./pages/Login'))
 const Register = lazy(() => import('./pages/register'))
-const Home = lazy(() => import('./pages/Home'))
+const Main = lazy(() => import('./pages/Main'))
 
 export default class App extends Component {
   render() {
@@ -15,7 +15,7 @@ export default class App extends Component {
           <Switch>
             <Route path="/login" component={Login}></Route>
             <Route path="/register" component={Register}></Route>
-            <Route path="/home" component={Home}></Route>
+            <Route path="/main" component={Main}></Route>
             <Redirect to="/login" />
           </Switch>
         </Suspense>
